@@ -13,6 +13,7 @@ public class InputController : MonoBehaviour {
 
     }
 	void Update() {
+        Debug.Log(GetClick());
     }
 
     public static bool OnMouseHover() {
@@ -23,6 +24,14 @@ public class InputController : MonoBehaviour {
         return false;
     }
 
+    public static bool GetClick() {
+        if(Input.GetMouseButtonDown(0) || Input.touchCount == 1) {
+            
+            return true;
+        }
+        return false;
+
+    }
     /*public bool OnClick() {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
         if (Input.GetMouseButton(0) || Input.GetT) { }
