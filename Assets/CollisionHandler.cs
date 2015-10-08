@@ -31,6 +31,8 @@ public class CollisionHandler : MonoBehaviour {
 
 	}
 	void CheckForInteractable(){
+		if(IsColliding == true){
 
+		}
 	}
 }
